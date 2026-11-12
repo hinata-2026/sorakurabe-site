@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>そらくらべ｜経由地を選べる航空券比較アプリ</title>
+<meta name="description" content="iPhone アプリ「そらくらべ」。乗換案内のように経由地を指定して、航空券の料金を比べられます。近日公開予定。">
+<style>
+  :root {
+    --bg: #ffffff;
+    --card: #f5f7fa;
+    --line: #e1e5eb;
+    --text: #15181d;
+    --muted: #646b75;
+    --accent: #0073c7;
+    --warn: #d93025;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0e1116;
+      --card: #191d24;
+      --line: #2a303a;
+      --text: #f1f3f6;
+      --muted: #9aa2ad;
+      --accent: #4db3ff;
+      --warn: #ff6b5e;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    padding: 0 20px 72px;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif;
+    line-height: 1.85;
+    -webkit-text-size-adjust: 100%;
+  }
+  .wrap { max-width: 720px; margin: 0 auto; }
+  header {
+    padding: 56px 0 32px;
+    border-bottom: 1px solid var(--line);
+    margin-bottom: 32px;
+  }
+  .badge {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: .08em;
+    color: var(--accent);
+    margin-bottom: 10px;
+  }
+  h1 { font-size: 30px; margin: 0 0 8px; letter-spacing: -.01em; }
+  header p { margin: 0; color: var(--muted); font-size: 16px; }
+  h2 {
+    font-size: 19px;
+    margin: 44px 0 14px;
+    padding-left: 12px;
+    border-left: 4px solid var(--accent);
+    line-height: 1.5;
+  }
+  h3 { font-size: 16px; margin: 0 0 4px; }
+  p, li { font-size: 15.5px; }
+  ul { padding-left: 1.3em; }
+  li { margin-bottom: 6px; }
+  a { color: var(--accent); }
+  .features {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  @media (min-width: 560px) {
+    .features { grid-template-columns: 1fr 1fr; }
+  }
+  .card {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 16px 18px;
+  }
+  .card p { margin: 0; color: var(--muted); font-size: 14.5px; line-height: 1.75; }
+  .shots {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    margin: 8px 0 0;
+  }
+  @media (min-width: 640px) {
+    .shots { grid-template-columns: repeat(4, 1fr); }
+  }
+  figure { margin: 0; }
+  figure img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 18px;
+    border: 1px solid var(--line);
+  }
+  figcaption { font-size: 13px; color: var(--muted); margin-top: 6px; text-align: center; }
+  .note { color: var(--muted); font-size: 14px; }
+  .caution {
+    border-left: 4px solid var(--warn);
+    background: var(--card);
+    border-radius: 0 12px 12px 0;
+    padding: 12px 16px;
+    margin: 14px 0;
+  }
+  .caution p { margin: 0; font-size: 14.5px; }
+  table { width: 100%; border-collapse: collapse; margin: 14px 0; font-size: 15px; }
+  th, td { text-align: left; padding: 9px 4px; border-bottom: 1px solid var(--line); vertical-align: top; }
+  th { width: 8.5em; font-weight: 700; color: var(--muted); }
+  .mail, .card p.mail { font-size: 17px; font-weight: 700; word-break: break-all; margin-bottom: 6px; }
+  footer {
+    margin-top: 56px;
+    padding-top: 24px;
+    border-top: 1px solid var(--line);
+    color: var(--muted);
+    font-size: 14px;
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <div class="badge">COMING SOON</div>
+    <h1>そらくらべ</h1>
+    <p>乗換案内のように経由地を選んで、航空券の料金を比べられる iPhone アプリ</p>
+  </header>
+
+  <p>行きたい街を経由して旅したいのに、比較サイトでは安い別ルートばかり出てくる——。そらくらべは、<b>経由地を指定すると必ずそこを通る便だけ</b>を並べる、航空券の料金比較アプリです。予約は各予約サイトで行います。</p>
+
+  <h2>できること</h2>
+  <div class="features">
+    <div class="card">
+      <h3>経由地を指定して探す</h3>
+      <p>出発 → 経由 → 到着を、乗換案内のように縦に並べて入力。ソウル・台北・ドーハ・ヘルシンキなどの主要ハブから選べ、経由地は2つまで指定できます。</p>
+    </div>
+    <div class="card">
+      <h3>別切りの組み合わせも</h3>
+      <p>1枚の航空券で経由地を通る便がなければ、区間ごとの航空券を組み合わせて探します。乗継時間は3時間以上（変更可）の組み合わせだけ。</p>
+    </div>
+    <div class="card">
+      <h3>前後±3日の最安値</h3>
+      <p>出発日の前後3日の最安値を横に並べて表示。1日ずらすだけで安くなる日がひと目で分かります。</p>
+    </div>
+    <div class="card">
+      <h3>都市まるごと検索</h3>
+      <p>「東京」なら羽田と成田、「大阪」なら関西・伊丹・神戸をまとめて検索。空港ごとにも選べます。</p>
+    </div>
+    <div class="card">
+      <h3>注意点はバッジで</h3>
+      <p>「別切り」「空港移動あり」「深夜乗継」「乗継短い」をカードに表示。区間ごとのタイムラインで、乗継の様子も確認できます。</p>
+    </div>
+    <div class="card">
+      <h3>価格アラート</h3>
+      <p>気になる路線と目標金額を登録しておけます（値下がりの通知は今後のアップデートで対応予定）。</p>
+    </div>
+  </div>
+
+  <h2 id="screens">画面イメージ</h2>
+  <div class="shots">
+    <figure>
+      <img src="images/search.jpg" alt="検索画面。出発・経由・到着を縦に並べて入力し、条件チップで直行のみや別切りを含むを選ぶ" width="552" height="1200" loading="lazy">
+      <figcaption>経由地を入れて検索</figcaption>
+    </figure>
+    <figure>
+      <img src="images/results.jpg" alt="検索結果。上部に前後の日の最安値、下に総額・所要時間・乗継空港のカード" width="552" height="1200" loading="lazy">
+      <figcaption>前後の日の最安値と結果</figcaption>
+    </figure>
+    <figure>
+      <img src="images/selftransfer.jpg" alt="別切りの結果。赤い別切りバッジと空港移動ありのバッジが付いたカード" width="552" height="1200" loading="lazy">
+      <figcaption>別切りは赤いバッジで</figcaption>
+    </figure>
+    <figure>
+      <img src="images/detail.jpg" alt="行程の詳細。区間ごとのタイムラインと予約サイトで見るボタン" width="552" height="1200" loading="lazy">
+      <figcaption>区間ごとのタイムライン</figcaption>
+    </figure>
+  </div>
+  <p class="note">※ 開発中の画面です。表示している便・料金はサンプルで、実際の運賃ではありません。</p>
+
+  <h2>予約について</h2>
+  <ul>
+    <li>そらくらべのアプリ内では<b>予約・決済を行いません</b>。「予約サイトで見る」から各予約サイトに移動して手続きします。</li>
+    <li>表示する料金は目安です。料金・空席・手荷物の条件は、予約サイトでの表示が優先されます。</li>
+    <li>予約サイトへのリンクには、提携先の紹介リンク（アフィリエイトリンク）を含む場合があります。</li>
+  </ul>
+  <div class="caution">
+    <p><b>「別切り」の行程について</b>：航空券が別々のため、前の便が遅れて乗り遅れても補償や振替はありません。乗継地で荷物を受け取って預け直す必要があり、入国（ビザや入国審査）が必要になる場合があります。</p>
+  </div>
+
+  <h2>動作環境</h2>
+  <table>
+    <tr><th>公開予定</th><td>近日公開予定（App Store）</td></tr>
+    <tr><th>対応OS</th><td>iOS 17.0 以降</td></tr>
+    <tr><th>対応端末</th><td>iPhone（縦向き）</td></tr>
+    <tr><th>価格</th><td>無料</td></tr>
+    <tr><th>アカウント</th><td>登録・ログインは不要です</td></tr>
+  </table>
+
+  <h2>お問い合わせ</h2>
+  <p>ご意見・ご要望・不具合のご報告は、下のメールアドレスまでお願いします。</p>
+  <div class="card">
+    <p class="mail"><a href="mailto:monaka.owners.club@gmail.com">monaka.owners.club@gmail.com</a></p>
+    <p class="note">お返事までに数日かかることがあります。不具合のご報告の際は、<b>iPhone の機種</b>・<b>iOS のバージョン</b>・<b>どの画面で何をしたときに起きたか</b>を添えていただけると助かります。</p>
+  </div>
+
+  <h2>プライバシー</h2>
+  <p>そらくらべは、氏名やメールアドレスなどの個人情報を集めていません。詳しくは <a href="privacy.html">プライバシーポリシー</a> をご覧ください。</p>
+
+  <footer>
+    そらくらべ運営
+  </footer>
+
+</div>
+</body>
+</html>
