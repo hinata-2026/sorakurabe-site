@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>そらくらべ｜経由地を選べる航空券比較アプリ</title>
-<meta name="description" content="iPhone アプリ「そらくらべ」。乗換案内のように経由地を指定して、航空券の料金を比べられます。近日公開予定。">
+<title>そらくらべ｜航空券の安い日が見つかるアプリ</title>
+<meta name="description" content="iPhone アプリ「そらくらべ」。1か月の最安値カレンダーで、航空券の安い日がひと目で分かります。近日公開予定。">
 <!-- Travelpayouts Drive（提携サービスのスクリプト。プライバシーポリシー 12 に記載） -->
 <script nowprocket data-noptimize="1" data-cfasync="false" data-wpfc-render="false" seraph-accel-crit="1" data-no-defer="1" data-cmp-ab="2">
 (function () {
@@ -96,7 +96,7 @@ document.head.appendChild(script);
     margin: 8px 0 0;
   }
   @media (min-width: 640px) {
-    .shots { grid-template-columns: repeat(4, 1fr); }
+    .shots { grid-template-columns: repeat(3, 1fr); }
   }
   figure { margin: 0; }
   figure img {
@@ -135,69 +135,62 @@ document.head.appendChild(script);
   <header>
     <div class="badge">COMING SOON</div>
     <h1>そらくらべ</h1>
-    <p>乗換案内のように経由地を選んで、航空券の料金を比べられる iPhone アプリ</p>
+    <p>航空券の安い日が、カレンダーでひと目で分かる iPhone アプリ</p>
   </header>
 
-  <p>行きたい街を経由して旅したいのに、比較サイトでは安い別ルートばかり出てくる——。そらくらべは、<b>経由地を指定すると必ずそこを通る便だけ</b>を並べる、航空券の料金比較アプリです。予約は各予約サイトで行います。</p>
+  <p>「いつ行くのが安いんだろう？」——そらくらべは、行き先を選ぶだけで<b>1か月ぶんの最安値をカレンダーに並べる</b>アプリです。安い日を見つけたら、そのまま予約サイトで便を探せます。予約は各予約サイトで行います。</p>
 
   <h2>できること</h2>
   <div class="features">
     <div class="card">
-      <h3>経由地を指定して探す</h3>
-      <p>出発 → 経由 → 到着を、乗換案内のように縦に並べて入力。ソウル・台北・ドーハ・ヘルシンキなどの主要ハブから選べ、経由地は2つまで指定できます。</p>
+      <h3>1か月の最安値カレンダー</h3>
+      <p>日ごとの最安値をカレンダーに表示。安い日ほど濃い緑で、その月でいちばん安い日がすぐ分かります。</p>
     </div>
     <div class="card">
-      <h3>別切りの組み合わせも</h3>
-      <p>1枚の航空券で経由地を通る便がなければ、区間ごとの航空券を組み合わせて探します。乗継時間は3時間以上（変更可）の組み合わせだけ。</p>
+      <h3>その日の最安と、直行便の最安</h3>
+      <p>日を選ぶと、いちばん安い便と直行便でいちばん安い便を表示。出発・到着の時刻や航空会社も確認できます。</p>
     </div>
     <div class="card">
-      <h3>前後±3日の最安値</h3>
-      <p>出発日の前後3日の最安値を横に並べて表示。1日ずらすだけで安くなる日がひと目で分かります。</p>
+      <h3>値下がりを通知</h3>
+      <p>気になる区間と目標金額を登録しておくと、目安の料金が目標以下になったときに通知でお知らせします。</p>
     </div>
     <div class="card">
-      <h3>都市まるごと検索</h3>
-      <p>「東京」なら羽田と成田、「大阪」なら関西・伊丹・神戸をまとめて検索。空港ごとにも選べます。</p>
+      <h3>往復の合計も</h3>
+      <p>往路と復路それぞれで安い日を選ぶと、往復の目安の合計を表示します。</p>
     </div>
     <div class="card">
-      <h3>注意点はバッジで</h3>
-      <p>「別切り」「空港移動あり」「深夜乗継」「乗継短い」をカードに表示。区間ごとのタイムラインで、乗継の様子も確認できます。</p>
+      <h3>世界の約3,600空港</h3>
+      <p>「東京」なら羽田と成田をまとめて検索。日本語名（ひらがなでも）・英語名・国名・空港コードで探せます。</p>
     </div>
     <div class="card">
-      <h3>価格アラート</h3>
-      <p>気になる路線と目標金額を登録しておけます（値下がりの通知は今後のアップデートで対応予定）。</p>
+      <h3>経由地を選んで、乗換案内のように</h3>
+      <p>「東京→イスタンブール→カイロ」のように経由地を最大3つまで指定。区間ごとに便と時間を選べて、経由地で1泊する旅程も組めます。おすすめの経由地も表示します。</p>
     </div>
   </div>
 
   <h2 id="screens">画面イメージ</h2>
   <div class="shots">
     <figure>
-      <img src="images/search.jpg" alt="検索画面。出発・経由・到着を縦に並べて入力し、条件チップで直行のみや別切りを含むを選ぶ" width="552" height="1200" loading="lazy">
-      <figcaption>経由地を入れて検索</figcaption>
+      <img src="images/search.jpg" alt="検索画面。出発地と到着地、日付、直行のみなどの条件を選ぶ" width="552" height="1200" loading="lazy">
+      <figcaption>行き先を選んで検索</figcaption>
     </figure>
     <figure>
-      <img src="images/results.jpg" alt="検索結果。上部に前後の日の最安値、下に総額・所要時間・乗継空港のカード" width="552" height="1200" loading="lazy">
-      <figcaption>前後の日の最安値と結果</figcaption>
+      <img src="images/results.jpg" alt="1か月の最安値カレンダー。安い日ほど濃い緑で表示される" width="552" height="1200" loading="lazy">
+      <figcaption>最安値カレンダー</figcaption>
     </figure>
     <figure>
-      <img src="images/selftransfer.jpg" alt="別切りの結果。赤い別切りバッジと空港移動ありのバッジが付いたカード" width="552" height="1200" loading="lazy">
-      <figcaption>別切りは赤いバッジで</figcaption>
-    </figure>
-    <figure>
-      <img src="images/detail.jpg" alt="行程の詳細。区間ごとのタイムラインと予約サイトで見るボタン" width="552" height="1200" loading="lazy">
-      <figcaption>区間ごとのタイムライン</figcaption>
+      <img src="images/detail.jpg" alt="行程の詳細。出発と到着の時刻、航空会社、料金、予約サイトで見るボタン" width="552" height="1200" loading="lazy">
+      <figcaption>便の詳細から予約サイトへ</figcaption>
     </figure>
   </div>
-  <p class="note">※ 開発中の画面です。表示している便・料金はサンプルで、実際の運賃ではありません。</p>
+  <p class="note">※ 開発中の画面です。</p>
 
   <h2>予約について</h2>
   <ul>
-    <li>そらくらべのアプリ内では<b>予約・決済を行いません</b>。「予約サイトで見る」から各予約サイトに移動して手続きします。</li>
-    <li>表示する料金は目安です。料金・空席・手荷物の条件は、予約サイトでの表示が優先されます。</li>
-    <li>予約サイトへのリンクには、提携先の紹介リンク（アフィリエイトリンク）を含む場合があります。</li>
+    <li>そらくらべのアプリ内では<b>予約・決済を行いません</b>。「予約サイトで見る」から予約サイト（Aviasales。表示は英語・料金は円）に移動して手続きします。</li>
+    <li>表示する料金は、ほかの利用者の最近の検索から集めた<b>目安</b>です。料金・空席・手荷物の条件は、予約サイトでの表示が優先されます。料金の情報がない日もあります。</li>
+    <li>予約サイトへのリンクは、提携先の紹介リンク（アフィリエイトリンク）です。リンクから予約されると、運営者が紹介料を受け取ることがあります。</li>
   </ul>
-  <div class="caution">
-    <p><b>「別切り」の行程について</b>：航空券が別々のため、前の便が遅れて乗り遅れても補償や振替はありません。乗継地で荷物を受け取って預け直す必要があり、入国（ビザや入国審査）が必要になる場合があります。</p>
-  </div>
 
   <h2>動作環境</h2>
   <table>
